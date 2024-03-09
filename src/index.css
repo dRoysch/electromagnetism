@@ -1,0 +1,111 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(41, 10, 28, 0.514);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(src/assets/bg-wave.svg);
+  background-repeat: no-repeat;
+  --secondary-bg-color: rgba(255, 179, 11, 1);
+  --third-bg-color: rgba(54, 107, 217, 1);
+  --fourth-bg-color: rgba(41.302, 10.391, 27.734, 1);
+  --disaled-color: #d4d0d0;
+  --white: #ffffff;
+  --black: black;
+}
+
+a {
+  font-weight: 500;
+  color: var(--third-bg-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--third-bg-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 0;
+  margin-top: -10px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--secondary-bg-color);
+  color: var(--fourth-bg-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button.disabled {
+  background-color: var(--disaled-color);
+}
+button:hover {
+  border-color: var(--third-bg-color);
+}
+button:focus,
+button:focus-visible {
+  border-color: var(--third-bg-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--fourth-bg-color);
+    background-color: var(--white);
+  }
+  a:hover {
+    color: var(--third-bg-color);
+  }
+}
+
+/* Ripple */
+.ripple {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  position: fixed;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-bg-color);
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(3);
+    opacity: 0.05;
+  }
+}
+
+/* Presesntation */
+.presentation {
+  background-color: var(--white);
+  border-radius: 20px;
+  width: 85vw;
+  min-height: 415px;
+  margin: auto;
+  display: flex;
+  min-width: 320px;
+}
+.presentation > p {
+  background-color: var(--white);
+  color: var(--black);
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.7rem;
+}

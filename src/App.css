@@ -1,0 +1,73 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0px;
+  text-align: center;
+  --main-bg-color: rgba(41, 10, 28, 1);
+}
+
+/* CARD */
+.card {
+  margin-top: 1rem;
+  padding: 2em;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+}
+
+/* SLIDE */
+.slide {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  color: var(--main-bg-color);
+  width: 100%;
+}
+.slide-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.slide-content .text {
+  max-width: 150px;
+  align-self: center;
+}
+.slide img {
+  max-width: 300px;
+  height: auto;
+  grid-column: span 1;
+}
+
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.slide-container button {
+  align-self: center;
+}
+/* SLIDE INDEX*/
+.SlideIndex {
+  color: var(--main-bg-color);
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+.SlideIndex li {
+  cursor: pointer;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+.SlideIndex li:hover {
+  color: var(--secondary-bg-color);
+}
+/* WAVE COMPONENT */
+.Wave__img {
+  margin: auto;
+}
