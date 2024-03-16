@@ -20,6 +20,7 @@
   --disaled-color: #d4d0d0;
   --white: #ffffff;
   --black: black;
+  z-index: 10;
 }
 
 a {
@@ -97,7 +98,36 @@ button:focus-visible {
   margin: auto;
   display: flex;
   min-width: 320px;
+  position: relative;
 }
+
+.presentation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 90%;
+  background: radial-gradient(
+    circle at center,
+    rgb(255, 178, 11) 0%,
+    rgba(54, 108, 217, 0.683) 70%,
+    rgba(255, 178, 11, 0.567) 100%
+  );
+  animation: waveAnimation 7s linear infinite;
+  z-index: -1;
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
 .presentation > p {
   background-color: var(--white);
   color: var(--black);

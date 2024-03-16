@@ -33,7 +33,6 @@ function App() {
   return (
     <>
       <h1>{titlesArr[count]}️</h1>
-      {/* <div className={`card${count === 0 && "-disabled"}`}> */}
       <div className="card">
         <button
           disabled={count === 0}
@@ -47,6 +46,7 @@ function App() {
         </button>
       </div>
       <div className="presentation">
+        <div className="wave" />
         {count === 0 && (
           <SlideIndex handleClick={handleClick} titles={titlesArr} />
         )}
